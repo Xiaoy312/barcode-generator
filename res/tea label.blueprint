@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<LabelBlueprint Width="1576" Height="600" XDpi="600" YDpi="600" Background="White">
+    <!-- header -->
+    <DrawText Text="{model.Name}" Font="Cambria, 72px, Bold" DesiredArea="0,50,1576,200" Alignment="MiddleCenter" />
+
+    <!-- infusion instructions -->
+    <DrawText Text="{model.InfusionInfo.TeaQuantity}g pour {model.InfusionInfo.WaterQuantity}ml d’eau" Font="Times New Roman, 48pt" DesiredArea="80,250,600,325" Alignment="TopLeft" />
+    <DrawText Text="{model.InfusionInfo.WaterTemperature}℃ / {model.InfusionInfo.Duration} min" Font="Times New Roman, 48pt" DesiredArea="65,380,620,460" Alignment="TopCenter" />
+    <DrawText Text="{model.InfusionInfo.InfusionNumber} infusions" Font="Times New Roman, 48pt" DesiredArea="65,470,620,530" Alignment="TopCenter" />
+
+    <!-- bar code -->
+    <DrawText Text="{model.Size}g" Font="Arial, 36pt" DesiredArea="686,300,1400,350" Alignment="TopCenter" />
+    <DrawText Text="{model.SKU}" Font="Arial, 36pt" DesiredArea="686,500,1400,550" Alignment="TopCenter" />
+    <DrawBarcode BrushSize="6" DesiredArea="686,381,1400,489" Alignment="TopLeft" />
+</LabelBlueprint>
